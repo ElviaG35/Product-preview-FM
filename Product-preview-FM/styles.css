@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxygen:wght@300;400;700&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxygen:wght@300;400;700&family=Young+Serif&display=swap');
+
+/*root*/
+:root{
+--clr-light-green: hsl(158, 36%, 37%);
+--clr-dark-green: hsl(158, 42%, 18%);
+--clr-black:    hsl(212, 21%, 14%);
+--clr-grey:     hsl(228, 12%, 48%);
+--clr-cream:    hsl(30, 38%, 92%);
+--clr-white:    hsl(0, 0%, 100%);
+
+--ff-headings:'Fraunces',sans-serif;
+--ff-main:'Montserrat', serif;
+--fs-main:0.875rem;
+--fs-heading:2rem;
+--fw-regular: 500;
+--fw-bold: 700;
+}
+
+/*reset*/
+*, *::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    line-height: 1.1;
+}
+
+.mobile-img{
+display: none;
+}
+
+body{
+font-family:var(--ff-main);
+font-weight: var(--fw-500);
+font-size: var(--fs-main);
+color:var(--grey);
+background: var(--cream);
+}
+
+/*helper class*/
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.card-container{
+    width: 45em;
+    background-color:var(--clr-white);
+    border-radius: .6rem;
+    
+}
+.card-container > *{
+flex-basis:  100%;
+}
+
+.desktop-img{
+    border-top-left-radius:.6rem;
+    border-bottom-left-radius:.6rem ;
+}
+
+.card-description{
+padding: 0 2rem ;
+
+}
+
+.card-description > *{
+margin-top: 1.25rem;
+}
+
+
+.main-container{
+    height: 100dvh;
+    justify-content: center;
+    background:var(--clr-cream);
+}
+
+
+
+.perfume-name, .sale-price{
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-bold);
+
+}
+
+.perfume-name{
+color: var(--clr-black);
+}
+
+.small-title{
+    color:var(--clr-grey);
+    font-size: var(--ff-main);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.sale-price{
+    color:var(--clr-light-green);
+ 
+}
+
+.original-price{
+    text-decoration: line-through;
+    margin: 0 !important;
+}
+
+
+.btn{
+
+    justify-content: center;
+    width:100%;
+    color:var(--clr-white);
+    background: var(--clr-light-green);
+    padding: .8rem;
+    border: none;
+    gap: 0.5rem;
+    border-radius: .2rem;
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+
+h1{
+    font-weight:var(--fw-bold);
+    font-family:var(--fs-heading);
+}
+
+.perfume{
+    font-family: var(--ff-main);
+}
+
+.attribution {
+font-size: 11px;
+text-align: center; 
+margin: 5px 5px;
+}
+
+.attribution a {
+color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 580px){
+    .desktop-img{
+    display: none;
+    }
+
+    .mobile-img{
+    display: block;
+    }
+
+    .card-container {
+    flex-direction: column;
+    }
+}
+
+
+
+
+
